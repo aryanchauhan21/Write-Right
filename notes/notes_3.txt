@@ -1,0 +1,28 @@
+// Now we ll see how to pass data to templates through views
+
+1.	we do this by passing a context as a dictionary with key-value pairs.
+2.	Then we access this context by putting a Django block in the html code and 
+	then getting the values using the keys like this...
+	
+insidde view{
+	context = {}
+	context['some_string'] = "yeah, man!!"
+	return render(request, "htmlpage.html", context)
+}
+
+3.	And we access this context in the html file as
+	
+	{{some_string}}
+4.	We can also send lists as the dictionary elements in the Context.
+	And it can be accessed using a for loop block like
+	{% for item in list %}
+		{{item}}
+	//here we are not writing print(item) because we dont want the item to be 
+	  printed in the console.... and for HTML we just need to write the item 
+	  name in the code.
+
+5.	Another important feature is .... we can use Same snippet to display data
+	in a particular format accross webpages or the same webpage, by calling the 
+	snippets with arguments. For this we have to make snippets ... arguments
+	arguments accepting.
+	checkout the code.

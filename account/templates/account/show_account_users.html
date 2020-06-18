@@ -1,0 +1,13 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+<div class = "container">
+    <div class = "d-flex flex-column">
+        <h4>Registered users :</h4>
+        {% for account in accounts %}
+        <p> {{account.email}} | {{account.username}} </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+

@@ -1,0 +1,58 @@
+commands for django installation and starting project--
+
+pip install virtualenv
+virtualenv projectname
+cd projectname
+Scripts\activate
+django-admin startproject mysite
+python manage.py runserver
+
+some procedures for standard tasks--
+
+to stop server -- ctrl + c
+if u wanna hard reset the project then just stop the server and
+delete the db.sqlite3 database file
+
+tricks ---
+//for getting the installed librares in virtal env
+pip freeze 
+
+//for saving the installed librares in virtal env in a text file
+python freeze > requirements.txt
+
+//we use these comands to save the libraries we have to install later on a production server
+
+// to install all of these from the requrements text file we have onto the production server 
+we have the following command that installs all of these libs in a single command
+
+pip install -r requirements.txt
+// use the above line after creating a new virtualenv
+
+// After all of this follow the steps given below:--
+// now that u already have a Masterproject, then we have a mysite project which u'll rename
+// src and inside which u have another mysite directory
+// now src is like the master directory for django as it contains the manage.py file on which 
+// the server is started.
+// And your master project directory which is the one in which src resides is the root directory from where all the 
+// package names will be referenced accross the project.
+// since everything lives like an app in django, so we create our first homepage whuch will bw called as "mixed" (or anything that u want it to be)
+// for that we proceed as follows to set up the first page of the project
+
+1. In src directory in CMD , write-- python manage.py startapp mixed.
+// after this step you shoud see a new directory with some auto-generated files alongside your mysite module
+2. Now we have to declare that app we just created in the settings.py file of the mysite module inside the src directory.
+3. we need to write 'mixed', inside the INSTALLED_APPS section of the settings.py file.
+4. you have to always add the app name here in order for it to be processed in the project as u make different apps.
+5. since this was the homepage we put it inside the src directory.
+6. we make a new directory called template and put a html file in that directly which will act as an frontend for the homepage
+7. then we have to link this template directory to django by adding the template address inside the TEMPLATEs dictionary in the settings.py file of mysite
+   (check out this step from prewritten code).
+8. we have views inside apps which act as the frontend part and so we need to link the views with some backend function to fetchh data to it
+9. So we need to go to views.py in the mixed ap directory
+10. Then u have to make a simple function there...  check out this function from the code.
+11. In this view method we accept a request parameter from the server and return the rendered object which contains request data attached to the html(or any other kinda page) page.
+12. now that we have app with views and data attached to it, we need to tell django on which url we want to host this view
+13. For that we go to urls.py file of mysite and import the view that we just created and add it to the url patterns
+    (check ut the code for example, you can also import multiple view)
+14. so now u put path("", view_name) inside url_patterns. becuase its the homepage so the path is actually empty
+15. Thats all for this file.

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="border: 1px solid #000; margin-left:5px">
+    {% for question in questions %}
+        {% include 'mixed/snippets/question_snippet.html' with value=question %}
+    {% endfor %}
+</div>
+
+{% endblock content%}

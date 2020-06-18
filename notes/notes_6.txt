@@ -1,0 +1,22 @@
+// Here we see how to create custom user model which will be used in our website
+
+1. To get a clean slate we first go to src folder and delete the sqllite database file and inside the migrations folder
+   we delete all the migrations(commits) includeing the initial one.
+2. Then we run the server again to get the sqllite database file again.
+3. Now we make a new app 'account' which will contain all the user accounts.
+4. then we register this app in the settings.py file of mysite directory.
+5. Now we will make our first custom user model which extends AbstractBaseUser. (check out the code).
+   and we will override the varables and functions alredy defined in AbstractBaseUser class.
+6. We also have to make a MyAccountManager Class which will extend from BaseUserManager. (check from code).
+   This need to define two methods create_user, create_superuser.
+7. Now that we have created our account user model, we need to specify it in the setting.py file so that
+   the django can recognise that this new model is to be used for authentication.
+   // for this we have to add in setting.py:
+	AUTH_USER_MODEL = 'account.Account'
+8. Then make the migrations and migrate ...
+9. Now we again create a superuser to access the admin panel to see changes.
+10.We also have to register this model in admin.py file in the account app.
+11.Then run the server and see the changes.
+12.After all of these, there are still issues that needs to be addressed like showing the passwrd in 
+   the coded form and displying some more fields in the database where the users are listed.
+13.These will be addressed in the next lesson.

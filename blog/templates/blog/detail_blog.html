@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style type="text/css">
+    .card{
+        max-width: 1000px;
+    }
+
+    .container{
+        padding: 20px
+    }
+</style>
+<div class="container text-align-center text-style-">
+        <h3 class="display-4" style="display:inline">Blog by : </h3>
+        <h3 class="display-4 text-success" style="display:inline" >{{blog_post.author.username}}</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Blog post -->
+        <div class="card m-auto">
+            <img class="card-img-top" src="{{blog_post.image.url}}">
+            <div class="card-body mt-2 mb-2">
+                    <h2 class="card-title">{{blog_post.title}}</h2>
+                    <p class="card-text>">{{blog_post.body|safe}}</p>    <!-- safe enables the rendering of html -->
+            </div>
+            <div class="card-footer text-muted">
+                updated on {{blog_post.date_updated}} by {{blog_post.author.username}}
+            </div>
+            {% if blog_post.author == request.user %}
+            <a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary btn-lg btn-blog">Update</a>
+        {% endif %}
+        </div>
+
+
+
+        <!-- EndBlog post -->
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzxzzxzzzzzzzzzzzzzzzzxxxxzxxx// In this lesson we read about the models in python which will be used for making tables
+// please see the official documentation of python for list of all the model datafields
+1.	Create a model. Also check out
+	def __str__(self):
+		return whateverTheFuckYouWantToPrintWhenTheObjectGetsPrinted
+
+2.	Since the models are for creating a table in the database. We fist have to 
+	create a table with that model using:
+	python manage.py makemigrations
+
+3.	Then we have to commit these changes to the database using:
+	python manage.py migrate
+4. 	For these changes to be reflected in the admin panel we need to add the model we 
+	just created to the admin.py file anf then we have to register the table in the panel
+	as follows:
+	
+	from mixed.models import Question	
+	admin.site.register(Question)
+5. 	Then run the server and check out the admin panel

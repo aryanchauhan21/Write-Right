@@ -1,0 +1,14 @@
+// here we r gona deal with reusing html pages instead of making the new ones everytime
+1. To reuse pages we make use of django content blocks.
+// see the code for reference 
+2. Now since we have added 'templates' as the keyword inside the mysite.setting.py file
+   so Django will always try to find the html pages using the keyword 'tempalates' for 
+   directory name.
+3. So we add a new directory named templates inside the mixed app which will contain the pages which are 
+   a part of mixed app.
+4. So after we make the mixed_homepage.html which extends base.html, we need to put the same content block
+   inside the base.html file so that it can know where to inser the code from the new file
+5. Then as before we have to create a view for this html file
+6. The view will be similar as for now only difference being the path which we will write as 'mixed/home.html'.
+7. Next we have seen how to include snippets in the webpages so that we can use the same
+   piece of code for different webpages which contain similar content.

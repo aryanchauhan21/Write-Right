@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style = "border: 2px solid #000;">
+    <h1>This is the body of the mixed app homepage</h1>
+    <p>Here u write the stuff to be used in this page</p>
+</div>
+
+<br>Developer Name = {{Developer_Name}}<br>
+
+
+<p><h3>Hey man, we are now using the snippets here : </h3> </p>
+
+{% for item in demoItemList %}
+    {% include 'mixed/snippets/home_snippets2.html' with value=item %}<br>
+{% endfor %}
+
+<p><h3> Here the snippet is finishing </h3></p>
+
+
+{% endblock content %}
+
