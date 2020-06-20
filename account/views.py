@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-from src.account.models import Account
+from account.models import Account
 from django.contrib.auth import login, authenticate, logout
-from src.account.forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm
-from src.blog.models import BlogPost
+from account.forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm
+from blog.models import BlogPost
 
 
 # Create your views here.

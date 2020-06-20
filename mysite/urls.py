@@ -17,8 +17,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-from src.mixed.views import (home_screen_view)
-from src.account.views import (display_account_users, registration_view, logout_view, login_view, account_view, )
+from mixed.views import (home_screen_view)
+from account.views import (display_account_users, registration_view, logout_view, login_view, account_view, )
 from django.contrib.auth import views as auth_views
 from src.blog.views import must_authenticate_view
 

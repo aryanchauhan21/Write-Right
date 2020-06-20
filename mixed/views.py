@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from src.mixed.models import Questions
-from src.blog.models import BlogPost
+from mixed.models import Questions
+from blog.models import BlogPost
 from operator import attrgetter
-from src.blog.views import get_blog_queryset
+from blog.views import get_blog_queryset
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 NO_OF_POSTS_PER_PAGE = 5

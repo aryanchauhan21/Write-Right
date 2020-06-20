@@ -1,12 +1,11 @@
 from rest_framework import serializers
-from src.blog.models import BlogPost
+from blog.models import BlogPost
 import cv2
 import sys
 import os
 from django.conf import settings
-from django.core.files.storage import default_storage
 from django.core.files.storage import FileSystemStorage
-from src.blog.utils import is_image_aspect_ratio_valid, is_image_size_valid
+from blog.utils import is_image_aspect_ratio_valid, is_image_size_valid
 
 IMAGE_SIZE_MAX_BYTES = 1024 * 1024 * 2  # 2MB
 MIN_TITLE_LENGTH = 5

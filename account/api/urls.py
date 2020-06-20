@@ -1,5 +1,5 @@
 from django.urls import path
-from src.account.api.views import (
+from account.api.views import (
     registration_view,
     account_properties_view,
     update_account_view,

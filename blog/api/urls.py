@@ -1,7 +1,7 @@
 from django.urls import path
 
 
-from src.blog.api.views import (
+from blog.api.views import (
     api_detail_blog_view,
     api_create_blog_view,
     api_update_blog_view,

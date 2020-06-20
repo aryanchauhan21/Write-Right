@@ -1,5 +1,5 @@
 from django.urls import path
-from src.blog.views import (
+from blog.views import (
     create_blog_view,
     detail_blog_view,
     edit_blog_view,

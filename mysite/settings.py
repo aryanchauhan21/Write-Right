@@ -35,9 +35,9 @@ if DEBUG:
 INSTALLED_APPS = [
 
     # my apps
-    'src.blog',
-    'src.mixed',
-    'src.account',
+    'blog',
+    'mixed',
+    'account',
 
     # django apps
     'django.contrib.admin',

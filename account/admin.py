@@ -1,5 +1,5 @@
 from django.contrib import admin
-from src.account.models import Account
+from account.models import Account
 from django.contrib.auth.admin import UserAdmin
 
 

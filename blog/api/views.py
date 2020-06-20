@@ -7,9 +7,9 @@ from rest_framework.generics import ListAPIView
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.filters import SearchFilter, OrderingFilter
 
-from src.account.models import Account
-from src.blog.models import BlogPost
-from src.blog.api.serializers import BlogPostSerializer, BlogPostUpdateSerializer, BlogPostCreateSerializer
+from account.models import Account
+from blog.models import BlogPost
+from blog.api.serializers import BlogPostSerializer, BlogPostUpdateSerializer, BlogPostCreateSerializer
 
 CREATE_SUCCESS = 'created'
 

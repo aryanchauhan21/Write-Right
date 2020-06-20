@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from src.blog.models import BlogPost
-from src.blog.forms import CreateBlogPostForm, UpdateBlogPostForm
-from src.account.models import Account
+from blog.models import BlogPost
+from blog.forms import CreateBlogPostForm, UpdateBlogPostForm
+from account.models import Account
 from django.db.models import Q
 from django.http import HttpResponse
 
